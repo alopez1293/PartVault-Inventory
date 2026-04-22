@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title || "PartVault Inventory" %></title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <%- include("../partials/header", { page: page }) %>
+
+  <main id="main-content" class="site-main container">
+    <%- body %>
+  </main>
+
+  <%- include("../partials/footer") %>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

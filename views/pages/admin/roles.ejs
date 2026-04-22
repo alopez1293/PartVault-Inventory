@@ -1,0 +1,145 @@
+<section class="section">
+  <div class="section-header">
+    <div>
+      <h2 class="section-title">Role Management</h2>
+      <p class="section-subtitle">
+        Review the application roles used throughout PartVault Inventory.
+      </p>
+    </div>
+    <div class="inline-actions">
+      <a href="#" class="btn btn-primary">Create Role</a>
+      <a href="#" class="btn btn-outline">Export Roles</a>
+    </div>
+  </div>
+</section>
+
+<section class="section cards-grid two-col">
+  <article class="card">
+    <div class="role-card-header">
+      <h3 class="card-title">Guest</h3>
+      <span class="badge badge-yellow">Public Access</span>
+    </div>
+    <p class="card-text">
+      Guests can access only public-facing pages such as the home page, about page, and authentication pages.
+    </p>
+    <div class="detail-list">
+      <p><strong>Access Level:</strong> Minimal</p>
+      <p><strong>Primary Use:</strong> Public browsing before login</p>
+      <p><strong>Can Access:</strong> Home, About, Login, Register, Reset Password</p>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="role-card-header">
+      <h3 class="card-title">Authenticated User</h3>
+      <span class="badge badge-blue">Standard Access</span>
+    </div>
+    <p class="card-text">
+      Authenticated users can access standard signed-in features such as their dashboard, profile, reports, and transaction history.
+    </p>
+    <div class="detail-list">
+      <p><strong>Access Level:</strong> Standard</p>
+      <p><strong>Primary Use:</strong> Signed-in user access</p>
+      <p><strong>Can Access:</strong> Dashboard, Profile, Reports, Transactions Log</p>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="role-card-header">
+      <h3 class="card-title">Clerk</h3>
+      <span class="badge badge-green">Elevated Access</span>
+    </div>
+    <p class="card-text">
+      Clerks can perform day-to-day inventory operations such as browsing parts, managing checkouts, and handling operational workflows.
+    </p>
+    <div class="detail-list">
+      <p><strong>Access Level:</strong> Elevated</p>
+      <p><strong>Primary Use:</strong> Operational inventory tasks</p>
+      <p><strong>Can Access:</strong> Parts List, Checkouts, Create Checkout, plus standard user pages</p>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="role-card-header">
+      <h3 class="card-title">Admin</h3>
+      <span class="badge badge-red">Full Access</span>
+    </div>
+    <p class="card-text">
+      Admins can access all standard and clerk features plus administrative tools for managing users, roles, and permissions.
+    </p>
+    <div class="detail-list">
+      <p><strong>Access Level:</strong> Full</p>
+      <p><strong>Primary Use:</strong> System administration and oversight</p>
+      <p><strong>Can Access:</strong> All user, clerk, and admin pages</p>
+    </div>
+  </article>
+</section>
+
+<section class="section">
+  <article class="card">
+    <h3 class="card-title">Role Summary Table</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Description</th>
+            <th>Main Access Scope</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Guest</td>
+            <td>Public visitor with access to non-protected pages only</td>
+            <td>Public pages</td>
+            <td><span class="badge badge-green">Active</span></td>
+            <td>
+              <div class="table-actions">
+                <a href="#" class="btn btn-outline btn-sm">View</a>
+                <a href="#" class="btn btn-outline btn-sm">Edit</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Authenticated User</td>
+            <td>Signed-in user with standard application access</td>
+            <td>Standard user pages</td>
+            <td><span class="badge badge-green">Active</span></td>
+            <td>
+              <div class="table-actions">
+                <a href="#" class="btn btn-outline btn-sm">View</a>
+                <a href="#" class="btn btn-outline btn-sm">Edit</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Clerk</td>
+            <td>Operational role with elevated inventory workflow access</td>
+            <td>Inventory and checkout pages</td>
+            <td><span class="badge badge-green">Active</span></td>
+            <td>
+              <div class="table-actions">
+                <a href="#" class="btn btn-outline btn-sm">View</a>
+                <a href="#" class="btn btn-outline btn-sm">Edit</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Admin</td>
+            <td>Administrative role with full application access</td>
+            <td>All pages and admin controls</td>
+            <td><span class="badge badge-green">Active</span></td>
+            <td>
+              <div class="table-actions">
+                <a href="#" class="btn btn-outline btn-sm">View</a>
+                <a href="#" class="btn btn-outline btn-sm">Edit</a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+</section>

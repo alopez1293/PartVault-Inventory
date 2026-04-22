@@ -1,0 +1,33 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand-area">
+      <a href="/" class="site-brand">PartVault Inventory</a>
+      <p class="site-tagline">Track parts. Manage checkouts. Stay organized.</p>
+    </div>
+
+    <button
+      class="nav-toggle"
+      id="navToggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobileNav"
+      aria-label="Toggle navigation"
+    >
+      ☰
+    </button>
+
+    <div class="desktop-nav">
+      <%- include("nav", { page: page }) %>
+    </div>
+
+    <div class="account-menu">
+      <span class="account-label">Guest</span>
+    </div>
+  </div>
+
+  <div class="mobile-nav-wrapper" id="mobileNav">
+    <div class="container">
+      <%- include("nav", { page: page }) %>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,172 @@
+<section class="section">
+  <div class="section-header">
+    <div>
+      <h2 class="section-title">Permission Assignment</h2>
+      <p class="section-subtitle">
+        Review how application permissions are assigned across Guest, Authenticated User, Clerk, and Admin roles.
+      </p>
+    </div>
+    <div class="inline-actions">
+      <a href="#" class="btn btn-primary">Update Permissions</a>
+      <a href="#" class="btn btn-outline">Export Matrix</a>
+    </div>
+  </div>
+</section>
+
+<section class="section cards-grid two-col">
+  <article class="card">
+    <h3 class="card-title">Clerk Permissions</h3>
+    <div class="permission-list">
+      <div class="permission-item"><span>parts.read</span><span class="badge badge-green">Allowed</span></div>
+      <div class="permission-item"><span>checkout.read</span><span class="badge badge-green">Allowed</span></div>
+      <div class="permission-item"><span>checkout.add</span><span class="badge badge-green">Allowed</span></div>
+      <div class="permission-item"><span>transactions.read</span><span class="badge badge-green">Allowed</span></div>
+      <div class="permission-item"><span>report.read</span><span class="badge badge-green">Allowed</span></div>
+      <div class="permission-item"><span>admin.access</span><span class="badge badge-red">Denied</span></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">Admin Permissions</h3>
+    <div class="permission-list">
+      <div class="permission-item"><span>parts.read</span><span class="badge badge-green">Allowed</span></div>
+      <div class="permission-item"><span>checkout.read</span><span class="badge badge-green">Allowed</span></div>
+      <div class="permission-item"><span>checkout.add</span><span class="badge badge-green">Allowed</span></div>
+      <div class="permission-item"><span>user.read</span><span class="badge badge-green">Allowed</span></div>
+      <div class="permission-item"><span>role.read</span><span class="badge badge-green">Allowed</span></div>
+      <div class="permission-item"><span>permission.assign</span><span class="badge badge-green">Allowed</span></div>
+    </div>
+  </article>
+</section>
+
+<section class="section">
+  <article class="card">
+    <h3 class="card-title">Permission Matrix</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Guest</th>
+            <th>Authenticated User</th>
+            <th>Clerk</th>
+            <th>Admin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>home.read</td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>about.read</td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>dashboard.read</td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>profile.read</td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>parts.read</td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>checkout.read</td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>checkout.add</td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>transactions.read</td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>report.read</td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>admin.access</td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>user.read</td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>role.read</td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+          <tr>
+            <td>permission.assign</td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-red">No</span></td>
+            <td><span class="badge badge-green">Yes</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+</section>
+
+<section class="section cards-grid two-col">
+  <article class="card">
+    <h3 class="card-title">Assignment Notes</h3>
+    <p class="card-text">
+      This permission mapping reflects the four-role structure used in the project: Guest, Authenticated User, Clerk, and Admin.
+    </p>
+    <p class="card-text">
+      The values shown here are hardcoded for frontend presentation and can later be tied to live RBAC data.
+    </p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">Access Review Reminder</h3>
+    <div class="alert alert-warning">
+      Permissions should stay aligned with the project’s actual route and role model so the frontend and backend stay consistent.
+    </div>
+    <p class="card-text">Last review date shown in this mockup: March 12, 2026.</p>
+  </article>
+</section>

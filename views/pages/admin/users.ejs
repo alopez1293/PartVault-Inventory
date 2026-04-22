@@ -1,0 +1,130 @@
+<section class="section">
+  <div class="section-header">
+    <div>
+      <h2 class="section-title">User Management</h2>
+      <p class="section-subtitle">
+        View user accounts, role assignments, and account status information.
+      </p>
+    </div>
+    <div class="inline-actions">
+      <a href="#" class="btn btn-primary">Add User</a>
+      <a href="#" class="btn btn-outline">Export Users</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="filter-bar">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Search by name, email, or role"
+      aria-label="Search users"
+    />
+    <div class="inline-actions">
+      <a href="#" class="btn btn-outline">Filter</a>
+      <a href="#" class="btn btn-outline">Bulk Actions</a>
+    </div>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Join Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alex Lopez</td>
+          <td>alex.lopez@example.com</td>
+          <td>Standard User</td>
+          <td><span class="badge badge-green">Active</span></td>
+          <td>Jan 12, 2026</td>
+          <td>
+            <div class="table-actions">
+              <a href="#" class="btn btn-outline btn-sm">View</a>
+              <a href="#" class="btn btn-outline btn-sm">Edit</a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Maria Chen</td>
+          <td>maria.chen@example.com</td>
+          <td>Inventory Lead</td>
+          <td><span class="badge badge-green">Active</span></td>
+          <td>Jan 5, 2026</td>
+          <td>
+            <div class="table-actions">
+              <a href="#" class="btn btn-outline btn-sm">View</a>
+              <a href="#" class="btn btn-outline btn-sm">Edit</a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Jordan Ramirez</td>
+          <td>jordan.ramirez@example.com</td>
+          <td>Standard User</td>
+          <td><span class="badge badge-yellow">Pending</span></td>
+          <td>Feb 28, 2026</td>
+          <td>
+            <div class="table-actions">
+              <a href="#" class="btn btn-outline btn-sm">View</a>
+              <a href="#" class="btn btn-outline btn-sm">Edit</a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Nina Patel</td>
+          <td>nina.patel@example.com</td>
+          <td>Admin</td>
+          <td><span class="badge badge-green">Active</span></td>
+          <td>Dec 18, 2025</td>
+          <td>
+            <div class="table-actions">
+              <a href="#" class="btn btn-outline btn-sm">View</a>
+              <a href="#" class="btn btn-outline btn-sm">Edit</a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Trevor Hall</td>
+          <td>trevor.hall@example.com</td>
+          <td>Standard User</td>
+          <td><span class="badge badge-red">Disabled</span></td>
+          <td>Nov 9, 2025</td>
+          <td>
+            <div class="table-actions">
+              <a href="#" class="btn btn-outline btn-sm">View</a>
+              <a href="#" class="btn btn-outline btn-sm">Edit</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section cards-grid two-col">
+  <article class="card">
+    <h3 class="card-title">User Summary</h3>
+    <p class="card-text">125 user accounts are currently stored in the system.</p>
+    <p class="card-text">117 are active, 5 are pending, and 3 are disabled.</p>
+    <p class="card-text">Admins should review pending accounts weekly.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">Management Notes</h3>
+    <div class="alert alert-success">
+      User account data is displayed here as realistic dummy content for frontend presentation.
+    </div>
+    <p class="card-text">
+      Future sprints can replace this table with live database-backed account information.
+    </p>
+  </article>
+</section>

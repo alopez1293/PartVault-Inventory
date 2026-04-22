@@ -1,0 +1,74 @@
+<section class="section auth-shell">
+  <div class="section-header">
+    <div>
+      <h2 class="section-title">Create Checkout</h2>
+      <p class="section-subtitle">
+        Record a new checkout using realistic placeholder form fields.
+      </p>
+    </div>
+  </div>
+
+  <form action="#" method="post" class="form-card">
+    <h3 class="form-section-title">Checkout Details</h3>
+
+    <div class="form-grid two-col">
+      <div class="form-group">
+        <label for="checkout-user">User</label>
+        <select id="checkout-user" name="checkout_user" required>
+          <option value="">Select a user</option>
+          <option>Alex Lopez</option>
+          <option>Jordan Ramirez</option>
+          <option>Maria Chen</option>
+          <option>Nina Patel</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="checkout-part">Part</label>
+        <select id="checkout-part" name="checkout_part" required>
+          <option value="">Select a part</option>
+          <option>Relay Module RM-24</option>
+          <option>Torque Sensor TS-9</option>
+          <option>Air Regulator AR-5</option>
+          <option>Fuse Pack FP-20</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          placeholder="1"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="due-date">Due Date</label>
+        <input
+          type="date"
+          id="due-date"
+          name="due_date"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="purpose">Purpose / Notes</label>
+      <textarea
+        id="purpose"
+        name="purpose"
+        placeholder="Describe why the part is being checked out."
+      ></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Submit Checkout</button>
+      <a href="/checkouts" class="btn btn-outline">Cancel</a>
+    </div>
+  </form>
+</section>
