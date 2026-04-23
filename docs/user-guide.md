@@ -343,7 +343,7 @@ Logging out helps protect your account, especially on shared or public devices.
 
 ### Two-Factor Authentication
 
-Two-factor authentication is not implemented in the current version of PartVault Inventory. If this feature is added in a future version, this guide should be updated with setup and usage steps.
+Two-factor authentication is not implemented in the current version of PartVault Inventory.
 
 ## Troubleshooting
 
