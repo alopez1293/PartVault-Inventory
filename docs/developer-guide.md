@@ -51,7 +51,7 @@ This section explains how to clone, configure, and run PartVault Inventory on a 
 Clone the project repository to your local machine.
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/alopez1293/PartVault-Inventory.git
 cd <your-project-folder>
 ```
 
@@ -130,7 +130,7 @@ PartVault Inventory is organized into folders that separate routing, database lo
 
 ### High-Level Structure
 
-```text
+```
 auth/
 config/
 database/
@@ -245,7 +245,7 @@ PartVault Inventory uses a server-rendered web application architecture with an 
 
 ### Architecture Summary Diagram
 
-```text
+```
 Browser / Client
       |
       v
@@ -445,8 +445,6 @@ Important values include:
 The application uses MySQL through `mysql2`, and database access should continue using parameterized queries or controlled query helpers to reduce the risk of SQL injection.
 
 ### Security Caution for Future Development
-
-If you expand this project in future sprints, prioritize the following:
 
 - server-side validation for all user input
 - stronger audit logging for admin actions
