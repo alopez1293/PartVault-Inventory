@@ -6,15 +6,17 @@
     </div>
   </div>
 
-  <form action="#" method="post" class="form-card">
+  <form id="login-form" class="form-card">
+    <div id="login-message" class="form-message" style="display: none;"></div>
+
     <div class="form-grid">
       <div class="form-group">
-        <label for="email">Email Address</label>
+        <label for="login">Email Address or Username</label>
         <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="alex.lopez@example.com"
+          type="text"
+          id="login"
+          name="login"
+          placeholder="demo_user_02 or demo_user_02@example.com"
           required
         />
       </div>
@@ -41,3 +43,53 @@
     </div>
   </form>
 </section>
+
+<script>
+  const loginForm = document.getElementById("login-form");
+  const loginMessage = document.getElementById("login-message");
+
+  loginForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const login = document.getElementById("login").value.trim();
+    const password = document.getElementById("password").value;
+
+    loginMessage.style.display = "block";
+    loginMessage.textContent = "";
+    loginMessage.style.color = "";
+
+    try {
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          login,
+          password
+        })
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        loginMessage.textContent = result.error || "Login failed.";
+        loginMessage.style.color = "red";
+        return;
+      }
+
+      localStorage.setItem("partvault_token", result.data.token);
+      localStorage.setItem("partvault_user", JSON.stringify(result.data.user));
+
+      loginMessage.textContent = "Login successful. Redirecting...";
+      loginMessage.style.color = "green";
+
+      setTimeout(() => {
+        window.location.href = "/dashboard";
+      }, 800);
+    } catch (error) {
+      loginMessage.textContent = "Something went wrong. Please try again.";
+      loginMessage.style.color = "red";
+    }
+  });
+</script>

@@ -6,7 +6,9 @@
     </div>
   </div>
 
-  <form action="#" method="post" class="form-card">
+  <form id="register-form" class="form-card">
+    <div id="register-message" class="form-message" style="display: none;"></div>
+
     <div class="form-grid two-col">
       <div class="form-group">
         <label for="first-name">First Name</label>
@@ -81,3 +83,59 @@
     </div>
   </form>
 </section>
+
+<script>
+  const registerForm = document.getElementById("register-form");
+  const registerMessage = document.getElementById("register-message");
+
+  registerForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("register-email").value.trim();
+    const password = document.getElementById("register-password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+
+    registerMessage.style.display = "block";
+    registerMessage.textContent = "";
+    registerMessage.style.color = "";
+
+    if (password !== confirmPassword) {
+      registerMessage.textContent = "Passwords do not match.";
+      registerMessage.style.color = "red";
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          username,
+          email,
+          password
+        })
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        registerMessage.textContent = result.error || "Registration failed.";
+        registerMessage.style.color = "red";
+        return;
+      }
+
+      registerMessage.textContent = "Registration successful. Redirecting to login...";
+      registerMessage.style.color = "green";
+
+      setTimeout(() => {
+        window.location.href = "/login";
+      }, 1000);
+    } catch (error) {
+      registerMessage.textContent = "Something went wrong. Please try again.";
+      registerMessage.style.color = "red";
+    }
+  });
+</script>

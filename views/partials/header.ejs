@@ -21,7 +21,7 @@
     </div>
 
     <div class="account-menu">
-      <span class="account-label">Guest</span>
+      <a href="/login" class="account-label" id="accountLabel" style="text-decoration: none;">Guest</a>
     </div>
   </div>
 
@@ -31,3 +31,31 @@
     </div>
   </div>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const accountLabel = document.getElementById("accountLabel");
+    const savedUser = localStorage.getItem("partvault_user");
+
+    if (!accountLabel) {
+      return;
+    }
+
+    if (!savedUser) {
+      accountLabel.textContent = "Guest";
+      accountLabel.href = "/login";
+      return;
+    }
+
+    try {
+      const user = JSON.parse(savedUser);
+
+      accountLabel.textContent = user.username || user.email || "User";
+      accountLabel.href = "/profile";
+      accountLabel.title = "View Profile";
+    } catch (error) {
+      accountLabel.textContent = "Guest";
+      accountLabel.href = "/login";
+    }
+  });
+</script>
